@@ -1,0 +1,23 @@
+id,file,kind,headline,parameters,description
+S01,VideoS01_Exp_640V_cascade_pair-thetaS45_5000fps.mp4,exp,640 V cascade record,5000 fps; ≈55 ms window; four successive detached episodes,Cascade in which the mother drop sheds successive daughters; each episode re-forms a neck at the apex before the next breakup.
+S02,VideoS02_Exp_600V_pair-thetaS50_5000fps_10ms.mp4,exp,"600 V, first-extension record",5000 fps; 10 ms window; θE ≈ 59°,"High-speed record of the first spreading excursion at 600 V, resolved frame by frame around the pinch-off event."
+S03,VideoS03_Exp_550V_thetaEq59_pair-thetaS60_2000fps.mp4,exp,550 V pinch-off record,2000 fps; 100 ms window; pinch-off at 8.5 ms,Reference pinch-off case: the daughter detaches at ≈8.5 ms and is subsequently partially reabsorbed.
+S04,VideoS04_Exp_100V_thetaEq119_2000fps.mp4,exp,100 V record,2000 fps; θE ≈ 119°; no pinch-off,Sub-threshold voltage: the drop spreads only slightly and no neck forms.
+S05,VideoS05_Exp_200V_thetaEq92_2000fps.mp4,exp,200 V record,2000 fps; θE ≈ 92°; no pinch-off,Intermediate voltage; no interface breakup within the recorded window.
+S06,VideoS06_Exp_300V_thetaEq79_2000fps.mp4,exp,300 V record,2000 fps; θE ≈ 79°; no pinch-off,Intermediate voltage; the apex deforms but recoils without breakup.
+S07,VideoS07_Exp_400V_thetaEq76_2000fps.mp4,exp,400 V record,2000 fps; θE ≈ 76°; no pinch-off,Intermediate voltage; conical neck develops and then relaxes.
+S08,VideoS08_Exp_500V_thetaEq68_2000fps.mp4,exp,500 V record,2000 fps; θE ≈ 68°; no pinch-off,High voltage but still below the dynamical threshold: a conical neck forms and is withdrawn without satellite formation.
+S09,VideoS09_Exp_600V_thetaEq59_5000fps.mp4,exp,600 V pinch-off record,5000 fps; θE ≈ 59°; pinch-off,"Same physical case as S02 at full record length, used for the quantitative neck-angle and extension-ratio measurements."
+S22,VideoS22_ExpSim_550V_vs_thetaS60_event-aligned_8fps.mp4,exp,"Experiment vs simulation, event-aligned","left: 550 V experiment; right: simulation, θE = 60°; Δt = −6.0 to +5.0 ms, 0.5 ms steps","Side-by-side sequence aligned on the pinch-off instant, used in Note S12 and Figure S7 to show that the two neck histories coincide in time as well as in shape."
+S10,VideoS10_Sim_thetaS27_30ms.mp4,sim,"Simulation, θE = 27°",30 ms window; pinch-off; daughter retained,Deep spreading limit; the computed interface pinches off early and the daughter stays detached to the end of the window.
+S11,VideoS11_Sim_thetaS35_30ms.mp4,sim,"Simulation, θE = 35°",30 ms window; pinch-off; daughter retained,Second separation observed at ≈20.8 ms; the secondary daughter is partly reabsorbed at ≈21.6 ms.
+S12,VideoS12_Sim_thetaS40_30ms.mp4,sim,"Simulation, θE = 40°",30 ms window; pinch-off; reabsorbed,Pinch-off followed by complete reabsorption of the daughter within the window.
+S13,VideoS13_Sim_thetaS45_30ms.mp4,sim,"Simulation, θE = 45° (baseline)",30 ms window; pinch-off; baseline viscosity,Baseline case used for the viscosity and drop-size scans (S16–S21).
+S14,VideoS14_Sim_thetaS50_30ms.mp4,sim,"Simulation, θE = 50°",30 ms window; pinch-off; reabsorbed,Marginal pinch-off: the daughter forms and is then pulled back.
+S15,VideoS15_Sim_thetaS55_30ms.mp4,sim,"Simulation, θE = 55°",30 ms window; pinch-off; long-lived daughter,Secondary daughter appears at ≈16 ms and hovers for ≈43.5 ms before merging.
+S16,VideoS16_Sim_Bo0.5_thetaS45_30ms.mp4,sim,"Simulation, drop size 0.50",θE = 45°; R0 scaled 0.50; pinch-off,Smallest drop of the size scan; the pinch-off time scales as s^1.5.
+S17,VideoS17_Sim_Bo1.65_thetaS45_30ms.mp4,sim,"Simulation, drop size 1.65",θE = 45°; R0 scaled 1.65; pinch-off,Intermediate drop size of the scan.
+S18,VideoS18_Sim_Bo2.5_thetaS45_30ms.mp4,sim,"Simulation, drop size 2.50",θE = 45°; R0 scaled 2.50; pinch-off,Largest drop of the scan; the daughter is still ejected.
+S19,VideoS19_Sim_ko0.5_thetaS45_30ms.mp4,sim,"Simulation, oil viscosity ×0.5",θE = 45°; μo × 0.5; pinch-off,Thinner ambient oil; the neck still pinches off.
+S20,VideoS20_Sim_ko2_thetaS45_30ms.mp4,sim,"Simulation, oil viscosity ×2",θE = 45°; μo × 2; pinch-off,"Moderately damped case, still above the suppression threshold."
+S21,VideoS21_Sim_ko10_thetaS45_30ms.mp4,sim,"Simulation, oil viscosity ×10",θE = 45°; μo × 10; no pinch-off,"Viscous suppression: the same neck geometry is withdrawn, and no daughter forms."

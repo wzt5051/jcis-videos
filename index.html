@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supporting videos — JCIS electrowetting droplet dynamics</title>
+<style>
+  :root {
+    --ink:#12202b; --muted:#5b6b78; --line:#dfe5ea; --bg:#f6f8fa;
+    --accent:#0f6f6c; --accent-soft:#e6f2f1;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+         font:15px/1.6 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:36px 24px 26px; }
+  .wrap { max-width:1120px; margin:0 auto; }
+  .kicker { font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin:0 0 10px; }
+  h1 { font-size:22px; line-height:1.35; margin:0 0 10px; font-weight:650; }
+  .meta { color:var(--muted); font-size:13.5px; margin:0; }
+  .note { margin:18px 0 0; padding:14px 16px; background:var(--accent-soft); border-left:3px solid var(--accent);
+          border-radius:4px; font-size:13.5px; color:#174b49; }
+  .bar { position:sticky; top:0; z-index:9; background:rgba(246,248,250,.94); backdrop-filter:blur(6px);
+         border-bottom:1px solid var(--line); }
+  .bar .wrap { display:flex; gap:8px; align-items:center; padding:12px 24px; flex-wrap:wrap; }
+  button.f { border:1px solid var(--line); background:#fff; color:var(--ink); border-radius:999px;
+             padding:7px 14px; font-size:13px; cursor:pointer; }
+  button.f[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .count { margin-left:auto; color:var(--muted); font-size:12.5px; }
+  main { padding:24px; }
+  .grid { max-width:1120px; margin:0 auto; display:grid; gap:20px; grid-template-columns:repeat(2,minmax(0,1fr)); }
+  @media (max-width:860px) { .grid { grid-template-columns:1fr; } }
+  .card { background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden;
+           display:flex; flex-direction:column; }
+  .vid { width:100%; background:#eef1f4; aspect-ratio:4/3; object-fit:contain; display:block; }
+  .body { padding:14px 16px 12px; }
+  .row { display:flex; align-items:center; gap:8px; }
+  .sid { font-weight:700; font-size:13px; letter-spacing:.04em; }
+  .badge { font-size:11.5px; padding:2px 9px; border-radius:999px; border:1px solid var(--line); }
+  .badge.exp { background:#fdf1ea; border-color:#f2cdb8; color:#8a441d; }
+  .badge.sim { background:#eaf0fa; border-color:#c9d7ee; color:#1f3f77; }
+  h3 { font-size:15px; margin:8px 0 8px; font-weight:600; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin:0 0 10px; }
+  .chip { font-size:11.5px; color:var(--muted); background:var(--bg); border:1px solid var(--line);
+           border-radius:4px; padding:2px 7px; }
+  p { margin:0 0 6px; font-size:13.5px; color:#2c3d4a; }
+  .dl { margin-top:10px; }
+  .dl a { font-size:12.5px; color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; }
+  footer { max-width:1120px; margin:0 auto; padding:8px 24px 48px; color:var(--muted); font-size:12.5px; }
+  .hidden { display:none !important; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="kicker">Supporting videos</p>
+    <h1>Interfacial breakup and satellite formation in electrowetting-driven droplets: Dynamical thresholds beyond shape-only criteria</h1>
+    <p class="meta">Z.T. Wang — School of Mechanical and Electrical Engineering, Zhongshan Polytechnic, Zhongshan, China</p>
+    <p class="note">Twenty-two movies accompanying the manuscript submitted to
+      <em>Journal of Colloid and Interface Science</em>. S01–S09 and S22 are experimental
+      high-speed records; S10–S21 are computed interface animations for the parameter scans.
+      Recorded frame rates and windows are quoted as acquired; no time stamps are drawn on the
+      frames, so the time axis is given by the stated rate.</p>
+  </div>
+</header>
+<div class="bar">
+  <div class="wrap">
+    <button class="f" data-f="all" aria-pressed="true">All 22</button>
+    <button class="f" data-f="exp" aria-pressed="false">Experiment (10)</button>
+    <button class="f" data-f="sim" aria-pressed="false">Simulation (12)</button>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+<main><div class="grid" id="grid">
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S01.jpg">
+        <source src="videos/VideoS01_Exp_640V_cascade_pair-thetaS45_5000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS01_Exp_640V_cascade_pair-thetaS45_5000fps.mp4">Download VideoS01_Exp_640V_cascade_pair-thetaS45_5000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S01</span><span class="badge exp">Experiment</span></div>
+        <h3>640 V cascade record</h3>
+        <div class="chips"><span class="chip">5000 fps</span><span class="chip">≈55 ms window</span><span class="chip">four successive detached episodes</span></div>
+        <p>Cascade in which the mother drop sheds successive daughters; each episode re-forms a neck at the apex before the next breakup.</p>
+        <p class="dl"><a href="videos/VideoS01_Exp_640V_cascade_pair-thetaS45_5000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S02.jpg">
+        <source src="videos/VideoS02_Exp_600V_pair-thetaS50_5000fps_10ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS02_Exp_600V_pair-thetaS50_5000fps_10ms.mp4">Download VideoS02_Exp_600V_pair-thetaS50_5000fps_10ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S02</span><span class="badge exp">Experiment</span></div>
+        <h3>600 V, first-extension record</h3>
+        <div class="chips"><span class="chip">5000 fps</span><span class="chip">10 ms window</span><span class="chip">θE ≈ 59°</span></div>
+        <p>High-speed record of the first spreading excursion at 600 V, resolved frame by frame around the pinch-off event.</p>
+        <p class="dl"><a href="videos/VideoS02_Exp_600V_pair-thetaS50_5000fps_10ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S03.jpg">
+        <source src="videos/VideoS03_Exp_550V_thetaEq59_pair-thetaS60_2000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS03_Exp_550V_thetaEq59_pair-thetaS60_2000fps.mp4">Download VideoS03_Exp_550V_thetaEq59_pair-thetaS60_2000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S03</span><span class="badge exp">Experiment</span></div>
+        <h3>550 V pinch-off record</h3>
+        <div class="chips"><span class="chip">2000 fps</span><span class="chip">100 ms window</span><span class="chip">pinch-off at 8.5 ms</span></div>
+        <p>Reference pinch-off case: the daughter detaches at ≈8.5 ms and is subsequently partially reabsorbed.</p>
+        <p class="dl"><a href="videos/VideoS03_Exp_550V_thetaEq59_pair-thetaS60_2000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S04.jpg">
+        <source src="videos/VideoS04_Exp_100V_thetaEq119_2000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS04_Exp_100V_thetaEq119_2000fps.mp4">Download VideoS04_Exp_100V_thetaEq119_2000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S04</span><span class="badge exp">Experiment</span></div>
+        <h3>100 V record</h3>
+        <div class="chips"><span class="chip">2000 fps</span><span class="chip">θE ≈ 119°</span><span class="chip">no pinch-off</span></div>
+        <p>Sub-threshold voltage: the drop spreads only slightly and no neck forms.</p>
+        <p class="dl"><a href="videos/VideoS04_Exp_100V_thetaEq119_2000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S05.jpg">
+        <source src="videos/VideoS05_Exp_200V_thetaEq92_2000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS05_Exp_200V_thetaEq92_2000fps.mp4">Download VideoS05_Exp_200V_thetaEq92_2000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S05</span><span class="badge exp">Experiment</span></div>
+        <h3>200 V record</h3>
+        <div class="chips"><span class="chip">2000 fps</span><span class="chip">θE ≈ 92°</span><span class="chip">no pinch-off</span></div>
+        <p>Intermediate voltage; no interface breakup within the recorded window.</p>
+        <p class="dl"><a href="videos/VideoS05_Exp_200V_thetaEq92_2000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S06.jpg">
+        <source src="videos/VideoS06_Exp_300V_thetaEq79_2000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS06_Exp_300V_thetaEq79_2000fps.mp4">Download VideoS06_Exp_300V_thetaEq79_2000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S06</span><span class="badge exp">Experiment</span></div>
+        <h3>300 V record</h3>
+        <div class="chips"><span class="chip">2000 fps</span><span class="chip">θE ≈ 79°</span><span class="chip">no pinch-off</span></div>
+        <p>Intermediate voltage; the apex deforms but recoils without breakup.</p>
+        <p class="dl"><a href="videos/VideoS06_Exp_300V_thetaEq79_2000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S07.jpg">
+        <source src="videos/VideoS07_Exp_400V_thetaEq76_2000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS07_Exp_400V_thetaEq76_2000fps.mp4">Download VideoS07_Exp_400V_thetaEq76_2000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S07</span><span class="badge exp">Experiment</span></div>
+        <h3>400 V record</h3>
+        <div class="chips"><span class="chip">2000 fps</span><span class="chip">θE ≈ 76°</span><span class="chip">no pinch-off</span></div>
+        <p>Intermediate voltage; conical neck develops and then relaxes.</p>
+        <p class="dl"><a href="videos/VideoS07_Exp_400V_thetaEq76_2000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S08.jpg">
+        <source src="videos/VideoS08_Exp_500V_thetaEq68_2000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS08_Exp_500V_thetaEq68_2000fps.mp4">Download VideoS08_Exp_500V_thetaEq68_2000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S08</span><span class="badge exp">Experiment</span></div>
+        <h3>500 V record</h3>
+        <div class="chips"><span class="chip">2000 fps</span><span class="chip">θE ≈ 68°</span><span class="chip">no pinch-off</span></div>
+        <p>High voltage but still below the dynamical threshold: a conical neck forms and is withdrawn without satellite formation.</p>
+        <p class="dl"><a href="videos/VideoS08_Exp_500V_thetaEq68_2000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S09.jpg">
+        <source src="videos/VideoS09_Exp_600V_thetaEq59_5000fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS09_Exp_600V_thetaEq59_5000fps.mp4">Download VideoS09_Exp_600V_thetaEq59_5000fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S09</span><span class="badge exp">Experiment</span></div>
+        <h3>600 V pinch-off record</h3>
+        <div class="chips"><span class="chip">5000 fps</span><span class="chip">θE ≈ 59°</span><span class="chip">pinch-off</span></div>
+        <p>Same physical case as S02 at full record length, used for the quantitative neck-angle and extension-ratio measurements.</p>
+        <p class="dl"><a href="videos/VideoS09_Exp_600V_thetaEq59_5000fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="exp">
+      <video class="vid" controls preload="metadata" poster="posters/S22.jpg">
+        <source src="videos/VideoS22_ExpSim_550V_vs_thetaS60_event-aligned_8fps.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS22_ExpSim_550V_vs_thetaS60_event-aligned_8fps.mp4">Download VideoS22_ExpSim_550V_vs_thetaS60_event-aligned_8fps.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S22</span><span class="badge exp">Experiment</span></div>
+        <h3>Experiment vs simulation, event-aligned</h3>
+        <div class="chips"><span class="chip">left: 550 V experiment</span><span class="chip">right: simulation, θE = 60°</span><span class="chip">Δt = −6.0 to +5.0 ms, 0.5 ms steps</span></div>
+        <p>Side-by-side sequence aligned on the pinch-off instant, used in Note S12 and Figure S7 to show that the two neck histories coincide in time as well as in shape.</p>
+        <p class="dl"><a href="videos/VideoS22_ExpSim_550V_vs_thetaS60_event-aligned_8fps.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S10.jpg">
+        <source src="videos/VideoS10_Sim_thetaS27_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS10_Sim_thetaS27_30ms.mp4">Download VideoS10_Sim_thetaS27_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S10</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, θE = 27°</h3>
+        <div class="chips"><span class="chip">30 ms window</span><span class="chip">pinch-off</span><span class="chip">daughter retained</span></div>
+        <p>Deep spreading limit; the computed interface pinches off early and the daughter stays detached to the end of the window.</p>
+        <p class="dl"><a href="videos/VideoS10_Sim_thetaS27_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S11.jpg">
+        <source src="videos/VideoS11_Sim_thetaS35_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS11_Sim_thetaS35_30ms.mp4">Download VideoS11_Sim_thetaS35_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S11</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, θE = 35°</h3>
+        <div class="chips"><span class="chip">30 ms window</span><span class="chip">pinch-off</span><span class="chip">daughter retained</span></div>
+        <p>Second separation observed at ≈20.8 ms; the secondary daughter is partly reabsorbed at ≈21.6 ms.</p>
+        <p class="dl"><a href="videos/VideoS11_Sim_thetaS35_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S12.jpg">
+        <source src="videos/VideoS12_Sim_thetaS40_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS12_Sim_thetaS40_30ms.mp4">Download VideoS12_Sim_thetaS40_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S12</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, θE = 40°</h3>
+        <div class="chips"><span class="chip">30 ms window</span><span class="chip">pinch-off</span><span class="chip">reabsorbed</span></div>
+        <p>Pinch-off followed by complete reabsorption of the daughter within the window.</p>
+        <p class="dl"><a href="videos/VideoS12_Sim_thetaS40_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S13.jpg">
+        <source src="videos/VideoS13_Sim_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS13_Sim_thetaS45_30ms.mp4">Download VideoS13_Sim_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S13</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, θE = 45° (baseline)</h3>
+        <div class="chips"><span class="chip">30 ms window</span><span class="chip">pinch-off</span><span class="chip">baseline viscosity</span></div>
+        <p>Baseline case used for the viscosity and drop-size scans (S16–S21).</p>
+        <p class="dl"><a href="videos/VideoS13_Sim_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S14.jpg">
+        <source src="videos/VideoS14_Sim_thetaS50_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS14_Sim_thetaS50_30ms.mp4">Download VideoS14_Sim_thetaS50_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S14</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, θE = 50°</h3>
+        <div class="chips"><span class="chip">30 ms window</span><span class="chip">pinch-off</span><span class="chip">reabsorbed</span></div>
+        <p>Marginal pinch-off: the daughter forms and is then pulled back.</p>
+        <p class="dl"><a href="videos/VideoS14_Sim_thetaS50_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S15.jpg">
+        <source src="videos/VideoS15_Sim_thetaS55_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS15_Sim_thetaS55_30ms.mp4">Download VideoS15_Sim_thetaS55_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S15</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, θE = 55°</h3>
+        <div class="chips"><span class="chip">30 ms window</span><span class="chip">pinch-off</span><span class="chip">long-lived daughter</span></div>
+        <p>Secondary daughter appears at ≈16 ms and hovers for ≈43.5 ms before merging.</p>
+        <p class="dl"><a href="videos/VideoS15_Sim_thetaS55_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S16.jpg">
+        <source src="videos/VideoS16_Sim_Bo0.5_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS16_Sim_Bo0.5_thetaS45_30ms.mp4">Download VideoS16_Sim_Bo0.5_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S16</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, drop size 0.50</h3>
+        <div class="chips"><span class="chip">θE = 45°</span><span class="chip">R0 scaled 0.50</span><span class="chip">pinch-off</span></div>
+        <p>Smallest drop of the size scan; the pinch-off time scales as s^1.5.</p>
+        <p class="dl"><a href="videos/VideoS16_Sim_Bo0.5_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S17.jpg">
+        <source src="videos/VideoS17_Sim_Bo1.65_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS17_Sim_Bo1.65_thetaS45_30ms.mp4">Download VideoS17_Sim_Bo1.65_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S17</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, drop size 1.65</h3>
+        <div class="chips"><span class="chip">θE = 45°</span><span class="chip">R0 scaled 1.65</span><span class="chip">pinch-off</span></div>
+        <p>Intermediate drop size of the scan.</p>
+        <p class="dl"><a href="videos/VideoS17_Sim_Bo1.65_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S18.jpg">
+        <source src="videos/VideoS18_Sim_Bo2.5_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS18_Sim_Bo2.5_thetaS45_30ms.mp4">Download VideoS18_Sim_Bo2.5_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S18</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, drop size 2.50</h3>
+        <div class="chips"><span class="chip">θE = 45°</span><span class="chip">R0 scaled 2.50</span><span class="chip">pinch-off</span></div>
+        <p>Largest drop of the scan; the daughter is still ejected.</p>
+        <p class="dl"><a href="videos/VideoS18_Sim_Bo2.5_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S19.jpg">
+        <source src="videos/VideoS19_Sim_ko0.5_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS19_Sim_ko0.5_thetaS45_30ms.mp4">Download VideoS19_Sim_ko0.5_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S19</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, oil viscosity ×0.5</h3>
+        <div class="chips"><span class="chip">θE = 45°</span><span class="chip">μo × 0.5</span><span class="chip">pinch-off</span></div>
+        <p>Thinner ambient oil; the neck still pinches off.</p>
+        <p class="dl"><a href="videos/VideoS19_Sim_ko0.5_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S20.jpg">
+        <source src="videos/VideoS20_Sim_ko2_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS20_Sim_ko2_thetaS45_30ms.mp4">Download VideoS20_Sim_ko2_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S20</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, oil viscosity ×2</h3>
+        <div class="chips"><span class="chip">θE = 45°</span><span class="chip">μo × 2</span><span class="chip">pinch-off</span></div>
+        <p>Moderately damped case, still above the suppression threshold.</p>
+        <p class="dl"><a href="videos/VideoS20_Sim_ko2_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+    <article class="card" data-kind="sim">
+      <video class="vid" controls preload="metadata" poster="posters/S21.jpg">
+        <source src="videos/VideoS21_Sim_ko10_thetaS45_30ms.mp4" type="video/mp4">
+        Your browser cannot play this file. <a href="videos/VideoS21_Sim_ko10_thetaS45_30ms.mp4">Download VideoS21_Sim_ko10_thetaS45_30ms.mp4</a>.
+      </video>
+      <div class="body">
+        <div class="row"><span class="sid">S21</span><span class="badge sim">Simulation</span></div>
+        <h3>Simulation, oil viscosity ×10</h3>
+        <div class="chips"><span class="chip">θE = 45°</span><span class="chip">μo × 10</span><span class="chip">no pinch-off</span></div>
+        <p>Viscous suppression: the same neck geometry is withdrawn, and no daughter forms.</p>
+        <p class="dl"><a href="videos/VideoS21_Sim_ko10_thetaS45_30ms.mp4" download>MP4</a></p>
+      </div>
+    </article>
+</div></main>
+<footer>
+  Files are provided for peer review and for readers of the published article.
+  Contact: wzt505@zspt.edu.cn
+</footer>
+<script>
+  var btns = document.querySelectorAll('button.f');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var count = document.getElementById('count');
+  function apply(f) {
+    var n = 0;
+    cards.forEach(function (c) {
+      var show = (f === 'all' || c.dataset.kind === f);
+      c.classList.toggle('hidden', !show);
+      if (show) n++;
+      if (!show) { var v = c.querySelector('video'); if (v) v.pause(); }
+    });
+    count.textContent = n + ' shown';
+    btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.f === f); });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.f); }); });
+  apply('all');
+</script>
+</body>
+</html>
