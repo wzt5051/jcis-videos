@@ -1,3 +1,24 @@
+# Supporting videos — JCIS manuscript
+
+**Live site:** https://wzt5051.github.io/jcis-videos/
+
+22 movies (S01–S09 and S22 experiment, S10–S21 simulation), each with a poster frame,
+its acquisition/simulation parameters and a one-line description.
+
+## Suggested wording for the manuscript / cover letter
+
+Data availability sentence:
+
+> The 22 supporting movies (S01-S22) are openly available at https://wzt5051.github.io/jcis-videos/ and are also archived in the GitHub repository wzt5051/jcis-videos.
+
+Cover-letter sentence:
+
+> Supporting movies S01-S22, referenced individually in the manuscript and the Supporting
+> Information, can be viewed or downloaded at https://wzt5051.github.io/jcis-videos/; each movie
+> is listed there with its acquisition conditions (or simulation parameters) and a short description.
+
+---
+
 # Supporting videos — static site
 
 Built from `D:\Langmuir投稿资料\03-Supporting Information\Videos` (22 mp4, 6.3 MB total).
